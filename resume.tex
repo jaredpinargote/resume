@@ -1,0 +1,142 @@
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \usepackage[margin=1in]{geometry}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\usepackage{fontspec}
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = SourceSansPro-Bold.otf,
+ItalicFont = SourceSansPro-LightIt.otf
+]
+{SourceSansPro-Light.otf}
+
+    %\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+    \begin{document}
+\vspace*{-40pt}
+
+    
+
+%==== Profile ====%
+\vspace*{-10pt}
+\begin{center}
+	{\Huge \scshape {Jared Pinargote}}\\
+	Lehi, UT $\cdot$ jaredpnrgt@yahoo.com $\cdot$ 301-821-0941 $\cdot$ \href{https://www.linkedin.com/in/jared-pinargote}{https://www.linkedin.com/in/jared-pinargote}
+\end{center}
+
+%==== Education ====%
+\header{Education}
+\textbf{Brigham Young University - Idaho}\hfill Rexburg, ID\\
+BS Software Engineering \textit{GPA: 3.8} \hfill Jan 2016 - Dec 2017\\
+\vspace{2mm}
+
+\header{Projects}
+{\textbf{Interior Planning - Geomni}} {\sl ARKit, iOS Development} \\
+Creates floor plans by users scanning walls in augmented reality (AR). Corrects for noise and drift using geometric algorithms to align walls and rooms to each other. Intuitive design allows users to quickly learn and produce plans quicker than current AR floor plan creators with more accurate results.\\
+\vspace*{2mm}
+{\textbf{VR Reddit Client - Personal}} {\sl Unity3D, C\#, Oculus SDK, Oculus Rift} \hfill https://github.com/jaredpinargote/RedditForRift\\
+Virtual reality client to access reddit.com. Users can quickly view more content than on a monitor or phone. A physics-based interface allows for intuitive interactions, similar to sorting through a box of photos. Plans for a releasable product include basic Reddit functionality such as log-in and sorted viewing, along with an online multi-user experience.\\
+\vspace*{2mm}
+{\textbf{VR Music Visualizer}} {\sl Unity3D, C\#, Oculus SDK, Gear VR} \\
+Music visualizer for mobile that allows users to navigate their file system in VR, select a song, and view an audio reactive environment with some interaction using a 3-DoF controller.\\
+\vspace*{2mm}
+
+%==== Experience ====%
+\header{Experiance}
+\vspace{1mm}
+
+\textbf{Geomni} \hfill Lehi, Utah\\
+\textit{AR Software Engineer} \hfill December 2017 | Present\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Develop augmented reality solutions for insurance adjusters
+	\item Technical lead in producing geometric algorithms to correct for ARKit limitations
+	\item Ensure maintainability of code for optimal teamwork
+\end{itemize}
+\textbf{EZNetTools} \hfill Rexburg, ID\\
+\textit{Software Engineer} \hfill February 2017 | September 2017\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Develop software for internal company use
+	\item Maintain and update client-facing production software
+	\item Address company server issues
+\end{itemize}
+
+\header{Skills}
+\begin{tabular}{ l l }
+	Programming Languages: & Swift, C\#, C++, Kotlin                                                  \\
+	Spoken Languages:      & English, Spanish, Portuguese                                             \\
+	Interpersonal:         & Cooperative, Team Leader, Written Communication, Public Speaking         \\
+	Other:                 & Rapid Prototyping, Linear Algebra, Calculus, Geometry, Kinematic Physics \\
+\end{tabular}
+\vspace{2mm}
+
+\header{Volunteer}
+\textbf{Missionary - The Church of Jesus Christ of Latter-day Saints} \hfill May 2013 - April 2015\\
+Spent two years as a church representative planning meetings, setting goals, and organizing mission work. Visited the needy and helped maintain church organization in Espirito Santo, Brazil. Learned to cooperate with people from differing backgrounds and culture.\\
+\vspace*{2mm}
+
+\ 
+\end{document}
